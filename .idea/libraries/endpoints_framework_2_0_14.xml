@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="endpoints-framework-2.0.14">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.endpoints/endpoints-framework/2.0.14/88ae88b35c0c34963a621f8d416bd55f224dc8af/endpoints-framework-2.0.14.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.endpoints/endpoints-framework/2.0.14/55600328e78a8963b97c8c8f4dff7c4f2ffde8c4/endpoints-framework-2.0.14-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
