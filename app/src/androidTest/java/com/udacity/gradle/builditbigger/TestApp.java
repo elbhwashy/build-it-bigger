@@ -9,6 +9,8 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
+import java.util.concurrent.ExecutionException;
+
 import static android.support.test.espresso.Espresso.onView;
 import static android.support.test.espresso.action.ViewActions.click;
 import static android.support.test.espresso.assertion.ViewAssertions.matches;
@@ -26,13 +28,18 @@ public class TestApp extends AndroidTestCase {
             new ActivityTestRule<>(MainActivity.class);
 
     @Test
-    public void testVerifyResponse() {
-        onView(withId(R.id.btn_joke))
-                .perform(click());
-        onView(withId(R.id.textview))
-                .check(matches((withText(not(isEmptyString())))));
-        onView(withId(R.id.textview))
-                .check(matches(isDisplayed()));
+    public void testVerifyResponse() throws InterruptedException{
+        try{
+            onView(withId(R.id.btn_joke))
+                    .perform(click());
+            onView(withId(R.id.textview))
+                    .check(matches((withText(not(isEmptyString())))));
+            onView(withId(R.id.textview))
+                    .check(matches(isDisplayed()));
+
+        }catch (InterruptedException | ExecutionException e){
+            e.printStackTrace();
+        }
 
     }
 
