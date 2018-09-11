@@ -64,7 +64,7 @@ class Task extends AsyncTask<String, Void, String> {
         try {
             return myApiService.sayHi(name).execute().getJoke();
         } catch (IOException e) {
-            return e.getMessage();
+            return null;
         }
     }
 

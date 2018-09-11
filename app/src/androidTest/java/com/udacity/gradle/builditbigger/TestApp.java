@@ -28,8 +28,8 @@ public class TestApp extends AndroidTestCase {
             new ActivityTestRule<>(MainActivity.class);
 
     @Test
-    public void testVerifyResponse() throws InterruptedException{
-        try{
+    public void testVerifyResponse() {
+
             onView(withId(R.id.btn_joke))
                     .perform(click());
             onView(withId(R.id.textview))
@@ -37,9 +37,6 @@ public class TestApp extends AndroidTestCase {
             onView(withId(R.id.textview))
                     .check(matches(isDisplayed()));
 
-        }catch (InterruptedException | ExecutionException e){
-            e.printStackTrace();
-        }
 
     }
 
